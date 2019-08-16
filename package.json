@@ -1,0 +1,27 @@
+{
+  "name": "framework2",
+  "version": "1.0.0",
+  "description": "A framework for simple AngularJS Spa.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erling-iosub/framework2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erling-iosub/framework2/issues"
+  },
+  "homepage": "https://github.com/erling-iosub/framework2#readme",
+  "dependencies": {
+    "angular": "^1.7.8",
+    "angular-route": "^1.7.8",
+    "bootstrap": "^3.4.1",
+    "express": "^4.17.1",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.4.1"
+  }
+}
