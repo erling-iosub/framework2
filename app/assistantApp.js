@@ -1,2 +1,2 @@
 `use strict`
-const assistantApp = angular.module(`assistantApp`, [`myframeWork`])
+const assistant = angular.module(`assistant`, [`myframeWork`])
