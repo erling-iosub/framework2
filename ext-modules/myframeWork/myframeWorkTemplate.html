@@ -1,6 +1,4 @@
 <!--TITLE BAR -->
-
-
 <div class="myframework-title-bar">
   <div class="row">
 
@@ -12,6 +10,15 @@
         <p class="myframework-logo-title">{{title}}</p>
         <p class="myframework-logo-subtitle">{{subtitle}}</p>
       </div>
+
+    <!-- Menu Button, to toggle on/off the view of the menu
+         the menu will be visible only if the scope has a "isMenuButtonVisible" var set to true-->  
+        <div ng-if="isMenuButtonVisible" ng-click="menuButtonClicked()" 
+          class= "myframework-collapsed-menu pull-right">
+          <button type="button" class="btn myframework-nav-button">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
     </div>
 
 
@@ -26,6 +33,9 @@
 
   </div>
 </div>
+
+
+<!-- -->
 
 <div ng-transclude> </div>
 

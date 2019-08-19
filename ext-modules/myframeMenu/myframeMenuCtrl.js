@@ -1,6 +1,8 @@
 myframeMenu.controller(`myframeMenuCtrl`,
-  function myframeMenuCtrl($scope, $rootScope) {
-    
+  function myframeMenuCtrl($scope, $rootScope, $timeout, $window) {
+
+    $scope.showMenu = true;
+
     this.getActiveElement = function(){
       return $scope.activeElement
       
@@ -14,6 +16,15 @@ myframeMenu.controller(`myframeMenuCtrl`,
       $rootScope.$broadcast(`myframe-menu-item-selected-event`,
         { route: route }
       )
-    };
+    }
+
+
+    // listen to the data broadcast by myFrameWorkCtrl to know if the menu is 
+    // visible or not
+    $scope.$on(`myframeMenu-show`, (event,data) => {
+      $scope.showMenu = data.show
+      console.log("Show Menu myframeMenu ", $scope.showMenu)
+    })
+
 
   });
