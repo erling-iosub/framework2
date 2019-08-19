@@ -4,6 +4,7 @@ myframeWork.controller(`myframeWorkCtrl`,
     $scope.isMenuVisible = true;
     $scope.isMenuButtonVisible = true;
 
+    
     $scope.$on(`myframe-menu-item-selected-event`,
       (evt, data) => {
         $scope.routeString = data.route

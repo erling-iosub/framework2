@@ -12,6 +12,8 @@ myframeMenu.controller(`myframeMenuCtrl`,
       $scope.activeElement = element
       console.log($scope.activeElement)
     };
+
+    // use $broadcast to avoid depending on a particular routing system
     this.setRoute = (route) => {
       $rootScope.$broadcast(`myframe-menu-item-selected-event`,
         { route: route }

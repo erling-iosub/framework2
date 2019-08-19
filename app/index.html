@@ -2,7 +2,7 @@
 
 <html ng-app="assistant">
 
-<head>
+<head >
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>AngularJS Spa Framework</title>
 
@@ -15,7 +15,7 @@
   <link href="/ext-modules/myframeMenu/myframeMenu.css" rel="stylesheet">
 </head>
 
-<body class="container-fluid">
+<body class="container-fluid" ng-controller="assistantCtrl">
 
   <!--custom directive for framework-->
   <myframe-work-directive title="The Assistant" subtitle="3000" icon-file="images/robot_logo.png">
@@ -25,14 +25,13 @@
       <myframe-menu-item-directive label="Home"     icon="fa-home"     route="Home Page"></myframe-menu-item-directive>
       <myframe-menu-item-directive label="Weather"  icon="fa-sun-o"    route="Weather Page"></myframe-menu-item-directive>
       <myframe-menu-item-directive label="Exchange" icon="fa-eur"      route="Exchange Page"></myframe-menu-item-directive>
-      <myframe-menu-item-directive label="Calendar" icon="fa-calendar" route="Calendar Page"></myframe-menu-item-directive>
-      
-
+      <myframe-menu-item-directive label="Some Values" icon="fa-cogs"  route="Some Values Page"></myframe-menu-item-directive>
+      <myframe-menu-groupitem-directive> </myframe-menu-groupitem-directive>
     </myframe-menu-directive>
 
   </myframe-work-directive>
 
-
+  
 
 
   <!--app main module-->
@@ -42,15 +41,17 @@
   <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
 
   <script src="assistantApp.js"></script>
+  <script src="getDataService.js"></script>
+  <script src="assistantAppCtrl.js"></script>
 
   <script src="/ext-modules/myframeWork/myframeWork.js"></script>
-  <script src="/ext-modules/myframeWork/myframeWorkDirective.js"></script>
+  <script src="/ext-modules/myframeWork/myframeWorkDir.js"></script>
   <script src="/ext-modules/myframeWork/myframeWorkCtrl.js"></script>
 
   <script src="/ext-modules/myframeMenu/myframeMenu.js"></script>
   <script src="/ext-modules/myframeMenu/myframeMenuCtrl.js"></script>
-  <script src="/ext-modules/myframeMenu/myframeMenuDirective.js"></script>
-  <script src="/ext-modules/myframeMenu/myframeMenuItemDirective.js"></script>
+  <script src="/ext-modules/myframeMenu/myframeMenuDir.js"></script>
+  <script src="/ext-modules/myframeMenu/myframeMenuItemDir.js"></script>
 
   <script src="/ext-modules/myframeDashboard/myframeDashboard.js"></script>
 </body>
