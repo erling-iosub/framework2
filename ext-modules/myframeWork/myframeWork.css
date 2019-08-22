@@ -73,8 +73,8 @@
 }
 
 .myframe-view{
-  margin-left: 185px;
-  padding:0px;
+  margin-left: 200px;
+  padding: 0px;
   background-color: #ccc;
   min-height: 100vh;
   overflow: auto; 

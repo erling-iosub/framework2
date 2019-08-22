@@ -1,0 +1,17 @@
+body {
+  background-color: #444; /* dark grey*/
+  font-family: "Open Sans", sans-serif;
+}
+
+/* edit the container fluid from bootstrap so the page will fill the browser*/
+.container-fluid{
+  padding: 0px;
+}
+
+.weather-unordered-list{
+  list-style: none;
+}
+
+.exchange-unordered-list{
+  list-style: none;
+}

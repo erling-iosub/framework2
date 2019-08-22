@@ -12,7 +12,6 @@ myframeMenu.directive(`myframeMenuDir`,
         $timeout(() => {
           var item = element.find('.myframe-selectable-item:first')
           item.trigger('click');
-          console.log(`click`)
         })
       },
       controller: "myframeMenuCtrl"

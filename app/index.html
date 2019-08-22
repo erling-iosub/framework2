@@ -1,15 +1,70 @@
 <!DOCTYPE html>
 
-<html>
+<html ng-app="anyApp">
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>AngularJS Spa Framework</title>
 
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <link href="/node_modules/font-awesome/css/font-awesome.css" rel="stylesheet">
+  <link href="/node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+  <link href="app.css" rel="stylesheet">
+  <link href="/ext-modules/myframeWork/myframeWork.css" rel="stylesheet">
+  <link href="/ext-modules/myframeMenu/myframeMenu.css" rel="stylesheet">
+  <link href="/ext-modules/myframeDashboard/myframeDashboard.css" rel="stylesheet">
 </head>
 
-<body >
+<body class="container-fluid" ng-controller="anyAppCtrl">
 
+  <!--custom directive for framework-->
+
+  <myframe-work-dir title="APP TITLE" subtitle="APP Subtitle" icon-file="images/some_image.png">
+      <div>
+        <myframe-menu-dir>
+
+          <myframe-menu-item-dir label="asd1" icon="fa-home" route="/asd1"></myframe-menu-item-dir>
+          <myframe-menu-item-dir label="asd2" icon="fa-sun-o" route="/asd2"></myframe-menu-item-dir>
+          <myframe-menu-item-dir label="asd3" icon="fa-eur" route="/asd3"></myframe-menu-item-dir>
+
+          <myframe-menu-group-item-dir label="Some Values" icon="fa-cogs">
+            <myframe-menu-item-dir label="Value 1" icon="fa-cog" route="/somevalues/value1"></myframe-menu-item-dir>
+            <myframe-menu-item-dir label="Value 2" icon="fa-cog" route="/somevalues/value1"></myframe-menu-item-dir>
+            <myframe-menu-item-dir label="Value 3" icon="fa-cog" route="/somevalues/value1"></myframe-menu-item-dir>
+          </myframe-menu-group-item-dir>
+
+
+        </myframe-menu-dir>
+      </div>
+  </myframe-work-dir>
+
+
+
+  <!--app main module-->
+  <script src="/node_modules/jquery/dist/jquery.js"></script>
+  <script src="/node_modules/angular/angular.js"></script>
+  <script src="/node_modules/angular-animate/angular-animate.js"></script>
+  <script src="/node_modules/angular-route/angular-route.js"></script>
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+  <script src="anyApp.js"></script>
+  <script src="anyAppCtrl.js"></script>
+  <script src="anyAppRouteConfig.js"></script>
+
+
+  <script src="/ext-modules/myframeWork/myframeWork.js"></script>
+  <script src="/ext-modules/myframeWork/myframeWorkDir.js"></script>
+  <script src="/ext-modules/myframeWork/myframeWorkCtrl.js"></script>
+
+  <script src="/ext-modules/myframeMenu/myframeMenu.js"></script>
+  <script src="/ext-modules/myframeMenu/myframeMenuCtrl.js"></script>
+  <script src="/ext-modules/myframeMenu/myframeMenuDir.js"></script>
+  <script src="/ext-modules/myframeMenu/myframeMenuItemDir.js"></script>
+  <script src="/ext-modules/myframeMenu/myframeMenuGroupItemDir.js"></script>
+
+  <script src="/ext-modules/myframeDashboard/myframeDashboard.js"></script>
+  <script src="/ext-modules/myframeDashboard/myframeDashboardDir.js"></script>
 </body>
 
 </html>

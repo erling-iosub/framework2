@@ -1,6 +1,6 @@
 `use strict`
 myframeWork.controller(`myframeWorkCtrl`,
-  function ($scope, $window, $timeout, $rootScope) {
+  function ($scope, $window, $timeout, $rootScope, $location) {
 
 
     $scope.isMenuVisible = true;
@@ -42,6 +42,10 @@ myframeWork.controller(`myframeWorkCtrl`,
     $scope.$on(`myframe-menu-item-selected-event`,
       (evt, data) => {
         $scope.routeString = data.route;
+
+        //
+        $location.path(data.route);
+
         checkWidth();
         broadcastMenuState();
       })
