@@ -1,59 +1,15 @@
 <!DOCTYPE html>
 
-<html ng-app="assistant">
+<html>
 
-<head >
+<head>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>AngularJS Spa Framework</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-
-  <link href="/node_modules/font-awesome/css/font-awesome.css" rel="stylesheet">
-  <link href="/node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
-  <link href="app.css" rel="stylesheet">
-  <link href="/ext-modules/myframeWork/myframeWork.css" rel="stylesheet">
-  <link href="/ext-modules/myframeMenu/myframeMenu.css" rel="stylesheet">
 </head>
 
-<body class="container-fluid" ng-controller="assistantCtrl">
+<body >
 
-  <!--custom directive for framework-->
-  <myframe-work-directive title="The Assistant" subtitle="3000" icon-file="images/robot_logo.png">
-
-    <myframe-menu-directive>
-
-      <myframe-menu-item-directive label="Home"     icon="fa-home"     route="Home Page"></myframe-menu-item-directive>
-      <myframe-menu-item-directive label="Weather"  icon="fa-sun-o"    route="Weather Page"></myframe-menu-item-directive>
-      <myframe-menu-item-directive label="Exchange" icon="fa-eur"      route="Exchange Page"></myframe-menu-item-directive>
-      <myframe-menu-item-directive label="Some Values" icon="fa-cogs"  route="Some Values Page"></myframe-menu-item-directive>
-      <myframe-menu-groupitem-directive> </myframe-menu-groupitem-directive>
-    </myframe-menu-directive>
-
-  </myframe-work-directive>
-
-  
-
-
-  <!--app main module-->
-  <script src="/node_modules/jquery/dist/jquery.js"></script>
-  <script src="/node_modules/angular/angular.js"></script>
-  <script src="/node_modules/angular-route/angular-route.js"></script>
-  <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
-
-  <script src="assistantApp.js"></script>
-  <script src="getDataService.js"></script>
-  <script src="assistantAppCtrl.js"></script>
-
-  <script src="/ext-modules/myframeWork/myframeWork.js"></script>
-  <script src="/ext-modules/myframeWork/myframeWorkDir.js"></script>
-  <script src="/ext-modules/myframeWork/myframeWorkCtrl.js"></script>
-
-  <script src="/ext-modules/myframeMenu/myframeMenu.js"></script>
-  <script src="/ext-modules/myframeMenu/myframeMenuCtrl.js"></script>
-  <script src="/ext-modules/myframeMenu/myframeMenuDir.js"></script>
-  <script src="/ext-modules/myframeMenu/myframeMenuItemDir.js"></script>
-
-  <script src="/ext-modules/myframeDashboard/myframeDashboard.js"></script>
 </body>
 
 </html>

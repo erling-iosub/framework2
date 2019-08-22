@@ -1,2 +1,3 @@
 `use strict`
-const myframeMenu = angular.module(`myframeMenu`,[])
+const myframeMenu = angular.module(`myframeMenu`,[`ngRoute`, `ngAnimate`])
+

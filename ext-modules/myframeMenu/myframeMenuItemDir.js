@@ -1,9 +1,9 @@
-myframeMenu.directive(`myframeMenuItemDirective`,
+myframeMenu.directive(`myframeMenuItemDir`,
   () => {
     return {
       restrict: `E`,
-      transclude:true,
-      require: `^myframeMenuDirective`,
+      transclude: true,
+      require: `^myframeMenuDir`,
       templateUrl: `/ext-modules/myframeMenu/myframeMenuItemTemplate.html`,
       scope: {
         label:`@`,
@@ -11,9 +11,14 @@ myframeMenu.directive(`myframeMenuItemDirective`,
         route:`@`
       },
       link: function (scope,element,attr,ctrl) {
-        scope.isActive = function(){
+        scope.isActive = () => {
           return element === ctrl.getActiveElement()
         };
+
+        scope.isVertical = () => {
+          return ctrl.isVertical() || element.parents('.myframe-menu-group-item').length>0;
+        
+        }
 
         //jquery on function
         element.on(`click`, (evt)=>{

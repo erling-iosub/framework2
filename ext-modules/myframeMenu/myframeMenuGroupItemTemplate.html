@@ -1,0 +1,18 @@
+<li class="myframe-selectable-item" ng-class="{'myframe-menu-item-horizontal': !isVertical() }" ng-click="clicked()">
+  <div class="myframe-noselect">
+    <i class="fa {{icon}} myframe-menu-icon"></i>
+    
+    {{label}}
+
+    <!--Icon on the right of a menu item showing if the sub-menu is open or closed-->
+
+    <i class="fa fa-chevron-left myframe-menu-group-item-left-indicator" ng-if="isVertical()"
+      ng-class="{'fa-rotate-270' : isOpen} "></i>
+
+  </div>
+</li>
+
+<!--submenu div is animated-->
+<div ng-show="isOpen" class="myframe-menu-group-item myframe-fade-in-animation" ng-class="{'myframe-popup-menu': !isVertical()}">
+  <ul ng-transclude> </ul>
+</div>

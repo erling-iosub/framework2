@@ -3,18 +3,28 @@
   background-color: #333;
   color:#ccc;
   padding-left: 0px;
-  width:200px;
+}
+
+.myframe-menu-area-horizontal{
+  height: 40px;
+  width: 100%;
+}
+
+.myframe-menu-area-vertical{
+  float:left;
   min-height: 100vh;
+  width:200px;
   padding-top: 30px;
 }
 
 .myframe-menu-area ul{
-  padding-left: 0px;
+  padding-left: 16px;
 }
 
 .myframe-menu-area .btn:hover{
   color:#ccc;
 }
+
 .myframe-menu{
   list-style-type: none;
   vertical-align: top;
@@ -57,4 +67,64 @@
   color: #ddd;
   margin-right: 0;
   margin-top: 8px;
+}
+
+.myframe-menu-group-item {
+  padding-left: 16px;
+}
+
+.myframe-menu-group-item-left-indicator{
+  float: right;
+  margin-top: 15px;
+  margin-right: 2px;
+  color: #ddd;
+}
+
+.myframe-menu-layout-button{
+  margin: 20px;
+  padding: 2px 8px;
+  color:#ddd;
+  background-color: #333;
+  border: 1px solid #999;
+}
+
+.myframe-menu-layout-button-horizontal{
+ position: absolute;
+ margin-top: -30px;
+ right: 10px;
+}
+
+.myframe-menu-item-horizontal{
+  display: inline-block;
+  width: 165px !important;
+  margin-left:20px;
+  margin-top:5px; 
+  line-height: 1.5em !important;
+}
+
+.myframe-popup-menu {
+  position: absolute;
+  z-index: 1000;
+  background-color: #333;
+  width: 200px;
+  padding: 0;
+}
+
+/* @media screen and (max-width:768){
+  .myframe-menu-area-horizontal{
+    min-height: 100vh;
+    width:200px;
+    padding-top: 30px;
+  }
+} */
+
+.myframe-fade-in-animation{
+  -moz-transition: linear all 0.5s;
+  -o-transition: linear all 0.5s;
+  -webkit-transition: linear all 0.5s;
+  transition: linear all 0.5s;
+}
+
+.myframe-fade-in-animation.ng-hide{
+  opacity: 0;
 }

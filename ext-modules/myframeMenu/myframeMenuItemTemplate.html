@@ -1,8 +1,12 @@
-<li class="myframe-selectable-item">
-  <div myframe-noselect>
+<!--
+  here isVertical is a function not a flag like in the myframeMenuTemplate
+  the function looks at the menu controller to get isVertical value
+-->
+
+<li class="myframe-selectable-item" ng-class="{'myframe-menu-item-horizontal': !isVertical() }">
+  <div class="myframe-noselect">
     <i class="fa {{icon}} myframe-menu-icon"></i>
     {{label}}
   </div>
-  <i class="fa fa-2x fa-caret-left myframe-active-indicator" ng-if="isActive()"></i>
-
+  <i ng-if="isActive() && isVertical()" class="fa fa-2x fa-caret-left myframe-active-indicator"></i>
 </li>

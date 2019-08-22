@@ -21,7 +21,6 @@
         </div>
     </div>
 
-
     <!--RIGHT SIDE-->
     <div class="myframework-right-side-controls col-sm-6">
       <div>
@@ -35,10 +34,24 @@
 </div>
 
 
-<!-- -->
 
-<div ng-transclude> </div>
+<!-- Framework BODY -->
+<div>
+  <!--MENU IS TRANSCLUDED HERE-->
+    <div>
+      <ng-transclude></ng-transclude>
+    </div>
 
-<div style="position:absolute;left:220px;top:200px;color:red;font-size: 44px;">
-  {{routeString}}
+  <!-- View are shown here -->
+  <div ng-view class="myframe-view" ng-class="{'myframe-view-full-width': !isMenuVertical || !isMenuVisible}">
+  </div>
 </div>
+
+
+
+
+<!-- TESTING ROUTES 
+  <div style="position:absolute;left:220px;top:200px;color:red;font-size: 44px;">
+  {{routeString}}
+  </div> 
+-->

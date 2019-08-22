@@ -1,5 +1,5 @@
 `use strict`
-myframeWork.directive(`myframeWorkDirective`,
+myframeWork.directive(`myframeWorkDir`,
   function () {
     return {
       restrict: `E`,

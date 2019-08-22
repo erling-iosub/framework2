@@ -1,15 +1,20 @@
-myframeMenu.directive(`myframeMenuDirective`,
-  () => {
+myframeMenu.directive(`myframeMenuDir`,
+  ($timeout) => {
     return {
       restrict: `E`,
       transclude: true,
-      templateUrl:`/ext-modules/myframeMenu/myframeMenuTemplate.html`,
+      templateUrl: `/ext-modules/myframeMenu/myframeMenuTemplate.html`,
       scope: {
-        
-      },
-      link: function (scope,element,attr) {
 
       },
-      controller:"myframeMenuCtrl"
+      link: (scope, element, attr) => {
+        
+        $timeout(() => {
+          var item = element.find('.myframe-selectable-item:first')
+          item.trigger('click');
+          console.log(`click`)
+        })
+      },
+      controller: "myframeMenuCtrl"
     }
   })
